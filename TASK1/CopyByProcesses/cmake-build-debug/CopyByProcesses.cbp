@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CopyByProcesses"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CopyByProcesses">
+				<Option output="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/CopyByProcesses" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 CopyByProcesses"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CopyByProcesses/fast">
+				<Option output="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/CopyByProcesses" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 CopyByProcesses/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/fromBufAToBufB.cpp">
+			<Option target="CopyByProcesses"/>
+		</Unit>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/fromBufBToDestination.cpp">
+			<Option target="CopyByProcesses"/>
+		</Unit>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/fromSourceToBufA.cpp">
+			<Option target="CopyByProcesses"/>
+		</Unit>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/head.h">
+			<Option target="CopyByProcesses"/>
+		</Unit>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/main.cpp">
+			<Option target="CopyByProcesses"/>
+		</Unit>
+		<Unit filename="/home/luo/Workspace/osPro/CopyByProcesses/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

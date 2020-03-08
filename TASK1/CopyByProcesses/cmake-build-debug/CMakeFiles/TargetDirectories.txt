@@ -1,0 +1,3 @@
+/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/CMakeFiles/CopyByProcesses.dir
+/home/luo/Workspace/osPro/CopyByProcesses/cmake-build-debug/CMakeFiles/edit_cache.dir

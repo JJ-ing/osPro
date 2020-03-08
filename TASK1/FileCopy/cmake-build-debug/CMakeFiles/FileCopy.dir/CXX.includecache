@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/luo/Workspace/osPro/FileCopy/main.cpp
+unistd.h
+/home/luo/Workspace/osPro/FileCopy/unistd.h
+fcntl.h
+/home/luo/Workspace/osPro/FileCopy/fcntl.h
+cstdio
+/home/luo/Workspace/osPro/FileCopy/cstdio
+sys/stat.h
+/home/luo/Workspace/osPro/FileCopy/sys/stat.h
+cerrno
+/home/luo/Workspace/osPro/FileCopy/cerrno
+cstring
+/home/luo/Workspace/osPro/FileCopy/cstring
+

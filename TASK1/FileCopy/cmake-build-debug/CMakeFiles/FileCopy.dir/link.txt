@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/FileCopy.dir/main.cpp.o  -o FileCopy 
