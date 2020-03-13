@@ -1,0 +1,111 @@
+###########编译内核###########
+0.环境准备
+虚拟机	内存分配4G,否则重启后进入新的内核会在内存死锁。
+更换下载源 http://mirrors.aliyun.com/ubuntu
+安装依赖
+sudo apt-get install build-essential
+sudo apt-get install libelf-dev
+sudo apt-get install libncurses-dev	#sudo make menuconfig#*  Unable to find the ncurses package
+sudo apt-get install flex	#sudo make menuconfig        /bin/sh: 1: flex: not found
+sudo apt-get install bison	#sudo make menuconfig       /bin/sh: 1: bison: not found
+sudo apt-get install libssl-dev #sudo make -j2                      scripts/sign-file.c:25:10: fatal error: openssl/opensslv.h: 没有那个文件或目录
+     	.
+				
+
+1. 配置
+sudo make mrproper
+sudo make menuconfig
+#sudo make localmodconfig	()
+
+2. 编译
+#sudo make dep
+#sudo make clean	()
+sudo make -j2		#2线程  由make bzImage 和 make menuconfig两部组成
+#sudo make modules
+
+3. 安装
+sudo  make modules_install
+sudo make install
+
+4. 更新启动项
+ sudo update-grub
+
+
+
+############新增系统调用##################
+1. 新增系统调用函数的实现
+junjie@ubuntu18:/usr/src/linux-4.9.18$ sudo gedit kernel/sys.c
+
+/* my sys-call */
+asmlinkage long sys_mycopy(const char *src_file,const char *copy_file){    
+        int infd,outfd,count;    
+        char buf[256];    
+        mm_segment_t fs;    
+        fs = get_fs();    
+        set_fs(get_ds());        
+        if((infd=sys_open(src_file,O_RDONLY,0)) == -1)    {        
+            return 1;            
+        }
+        if((outfd=sys_open(copy_file,O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR))== -1){
+            return 2;    
+        }
+        while((count = sys_read(infd,buf,256))>0)
+        {
+            if(sys_write(outfd,buf,count)!= count)        
+                return 3;        
+        }    
+        if(count == -1) return 4;    
+        sys_close(infd);    
+        sys_close(outfd);    
+        set_fs(fs);    
+        return 0;
+ }
+
+
+2. 新增系统调用函数的申明
+junjie@ubuntu18:/usr/src/linux-4.9.18$ sudo gedit arch/x86/include/asm/syscalls.h
+
+/* my sys-call */
+asmlinkage long sys_mycopy(const char *src_file,const char *copy_file);
+
+
+3. 添加系统调用编号
+junjie@ubuntu18:/usr/src/linux-4.9.18$ sudo gedit arch/x86/entry/syscalls/syscall_64.tbl
+
+428     common  mycopy                  sys_mycopy
+
+
+4. 编译内核
+
+
+
+5. 重启测试
+
+#include<linux/kernel.h>
+#include<sys/syscall.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    long int ret=syscall(332,"test.c","new.c");
+    if(ret==1){
+    	printf("open source file error!\n");
+    	exit(-1);
+	}
+	else if(ret==2){
+    	printf("open destination file error!\n");
+    	exit(-1);		
+	}
+	else if(ret==3 || ret==4){
+		printf("error when copy file!\n");
+    	exit(-1);
+	}
+	else{
+		printf("copy success!\n");
+	}
+    
+    return 0;
+}
+

@@ -1,0 +1,36 @@
+###########编译内核###########
+0.
+环境准备
+更换下载源
+安装依赖
+sudo apt-get install build-essential
+sudo apt-get install libelf-dev
+sudo apt-get install libncurses-dev
+sudo apt-get install flex	#sudo make menuconfig        /bin/sh: 1: flex: not found
+sudo apt-get install bison	#sudo make menuconfig       /bin/sh: 1: bison: not found
+sudo apt-get install libssl-dev #sudo make -j2                      scripts/sign-file.c:25:10: fatal error: openssl/opensslv.h: 没有那个文件或目录
+
+
+1. 配置
+sudo make mrproper
+sudo make menuconfig
+#sudo make localmodconfig	()
+
+2. 编译
+#sudo make dep
+#sudo make clean	()
+sudo make -j2		#2线程  由make bzImage 和 make menuconfig两部组成
+#sudo make modules
+
+3. 安装
+sudo  make modules_install
+sudo make install
+
+4. 更新启动项
+ sudo update-grub
+
+
+
+
+
+############新增系统调用##################
