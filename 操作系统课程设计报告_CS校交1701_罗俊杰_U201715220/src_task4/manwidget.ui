@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManWidget</class>
+ <widget class="QWidget" name="ManWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ManWidget</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="basic_info">
+    <attribute name="title">
+     <string>basic_info</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>30</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>主 机 名 称</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="host_name">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>461</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="ostype_">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>100</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>系 统 版 本</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="ostype">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>110</y>
+       <width>461</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="runtime_">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>240</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>运 行 时 间</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="starttime">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>180</y>
+       <width>461</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="starttime_">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>170</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>启 动 时 间</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="runtime">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>250</y>
+       <width>461</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="CPUinfo_">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>360</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPU 信 息</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="CPUinfo">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>320</y>
+       <width>461</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="process_info">
+    <attribute name="title">
+     <string>process_info</string>
+    </attribute>
+    <widget class="QTableWidget" name="process_info_table">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>761</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>pid</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>ppid</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>priority</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>vsize</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>rss</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="update_pinfos">
+     <property name="geometry">
+      <rect>
+       <x>313</x>
+       <y>476</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>update</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="process_op">
+    <attribute name="title">
+     <string>process_op</string>
+    </attribute>
+    <widget class="QTableWidget" name="process_searched_info">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>330</y>
+       <width>711</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>pid</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>ppid</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>priority</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>vsize</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string> rss</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLineEdit" name="search_line">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>120</y>
+       <width>451</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>301</x>
+       <y>70</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>input pid or name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>280</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>information</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="search_button">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>120</y>
+       <width>94</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="kill_button">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>170</y>
+       <width>101</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>kill</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="run_button">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>220</y>
+       <width>101</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>run</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="utilization_curve">
+    <attribute name="title">
+     <string>utilization_curve</string>
+    </attribute>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>731</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_1"/>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>270</y>
+       <width>731</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2"/>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="power_off">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>560</y>
+     <width>94</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>power off</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>511</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="index_time">
+      <property name="text">
+       <string>2018_8_3 17:08:09</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="index_cpu">
+      <property name="text">
+       <string>cpu use rate:  30.00%</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="index_mem">
+      <property name="text">
+       <string>cpu use rate:  30.00%</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
